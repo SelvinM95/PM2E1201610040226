@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E1201610040226.UbicationSave"
+              Title="Location Saved"
+             Icon="map.png">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ListView x:Name="lstUbicacion" ItemSelected="lstUbicacion_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Entry x:Name="id"  Text="{Binding id}" IsVisible="False"/>
+                                <Label x:Name="idT" Text="{Binding id}" Grid.Row="0" Grid.Column="1" TextColor="Black" />
+                                <Label Text="{Binding latitud}" Grid.Row="0" Grid.Column="2" TextColor="Black" />
+                                <Label Text="{Binding longitud}" Grid.Row="0" Grid.Column="3" TextColor="Black" />
+                                <Label Text="{Binding nombre}" Grid.Row="1" Grid.Column="2"  Grid.ColumnSpan="3"    TextColor="green" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

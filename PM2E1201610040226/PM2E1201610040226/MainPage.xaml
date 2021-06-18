@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:PM2E1201610040226"
+            x:Class="PM2E1201610040226.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ver Lista" x:Name="toolbarmenu" 
+                     Order="Primary"
+                     Priority="0"
+                     Clicked="toolbarmenu_Clicked"
+                     />
+    </ContentPage.ToolbarItems>
+
+    <AbsoluteLayout Margin="5,0,5,5">
+        <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Center" Margin="20,0,20,0" >
+
+            <Image 
+                Source="uth.png"
+                Margin="10"
+                HeightRequest="100"/>
+
+
+            <Label Text="Latitud actual" FontSize="Title" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand"/>
+            <Entry Text="" Keyboard="Numeric" x:Name="latitud" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="Longitud actual" FontSize="Title" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand"/>
+            <Entry Text="" Keyboard="Numeric"  x:Name="longitud" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="Describa la ubicación" FontSize="Title" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand"/>
+            <Editor Text="" Keyboard="Chat" x:Name="ubicacionC" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand"/>
+
+            <Label Text="Descripción corta" FontSize="Title" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand"/>
+            <Entry Text="" Keyboard="Email" x:Name="nombre" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand"/>
+
+            <Button x:Name="btnSalvar" Clicked="btnSalvar_Clicked"
+                    FontSize="Medium" TextColor="White" 
+                    BorderColor="Black" BackgroundColor="#00b33c"  
+                    CornerRadius="5" FlexLayout.AlignSelf="Stretch"  
+                    HorizontalOptions="CenterAndExpand" Text="Guardar"></Button>
+
+        </FlexLayout>
+    </AbsoluteLayout> 
+</ContentPage>

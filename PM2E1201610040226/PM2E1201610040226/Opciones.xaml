@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E1201610040226.Opciones">
+
+    <ContentPage.Content>
+    <AbsoluteLayout Margin="5,0,5,5">
+        <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Center" Margin="20,0,20,0" >
+
+            <Entry x:Name="id" Text="{Binding id}" IsVisible="False"/>
+            <Entry x:Name="descrip" Text="{Binding descripcion}" IsVisible="False"/>
+
+                <Label Text="Latitud actual" FontSize="Title" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand"/>
+            <Entry Text="{Binding latitud}" IsEnabled="False" Keyboard="Numeric"  x:Name="latitud" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand"/>
+
+            <Label Text="Longitud actual" FontSize="Title" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand"/>
+            <Entry Text="{Binding longitud}" IsEnabled="False" Keyboard="Numeric"  x:Name="longitud" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="Descripción corta" FontSize="Title" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand"/>
+            <Entry Text="{Binding nombre}" IsEnabled="False"  Keyboard="Email" x:Name="nombre" FlexLayout.AlignSelf="Stretch" HorizontalOptions="CenterAndExpand"/>
+
+
+            <StackLayout Orientation="Horizontal">
+                    <Button x:Name="Delete" Clicked="Delete_Clicked"
+                    FontSize="Medium" TextColor="White"
+                    BorderColor="Black" BackgroundColor="#FF0000" 
+                    CornerRadius="5" FlexLayout.AlignSelf="Stretch" 
+                    HorizontalOptions="CenterAndExpand" Text="Eliminar"></Button>
+                
+                    <Button x:Name="Ver" Clicked="Ver_Clicked"
+                    FontSize="Medium" TextColor="White" 
+                    BorderColor="Black" BackgroundColor="#00b33c"  
+                    CornerRadius="5" FlexLayout.AlignSelf="Stretch"  
+                    HorizontalOptions="CenterAndExpand" Text="Ver Mapa"></Button>
+
+              
+            </StackLayout> 
+            
+        </FlexLayout> 
+    </AbsoluteLayout>
+    </ContentPage.Content>
+
+
+</ContentPage>
